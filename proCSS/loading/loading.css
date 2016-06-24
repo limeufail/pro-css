@@ -47,16 +47,16 @@ body{
     box-sizing: border-box;
     /*box-shadow: 0 0 35px #2FD043, inset 0 0 35px #41FF3E;*/
     animation: rotate-inner 5s linear;
-    border: 5px white solid;
+    border: 10px white solid;
 }
 
 .inner-circle__offset{
-	height: 132px;
+	height: 137px;
     width: 50px;
     background-color: #000;
     position: absolute;
     left: calc(50% - 25px);
-    top: -5px;
+    top: -10px;
 }
 
 .inner-circle__offset:first-child{
@@ -67,14 +67,14 @@ body{
     height: 50%;
     top: 50%;
     transform-origin: top center;
-    padding-top: 7px;
+    padding-top: 12px;
 }
 .inner-circle__offset:nth-child(3){
 	transform: rotate(44deg);
     height: 50%;
     top: 50%;
     transform-origin: top center;
-    padding-top: 7px;
+    padding-top: 12px;
 }
 
 .circle-wrap .loading-label{
@@ -106,9 +106,11 @@ body{
     width: 100%;
 }
 .progress-bar{
-	width: 100%;
-	height: 30px;
-	background: linear-gradient(to bottom, rgba(210,255,82,0.7) 0%,rgba(145,232,66,0.2) 100%);
+    width: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(195, 234, 82, 0.7) 0%,rgba(145,232,66,0.2) 100%);
+    box-shadow: 0 0 10px #2FD043, inset 0 0 10px #41FF3E;
+    animation: progress 10s; 
 }
 .glitch span:before, 
 .glitch span:after {
@@ -135,6 +137,10 @@ body{
 
 @keyframes move-count{
     100% { transform: translateX(-750px); }
+}
+
+@keyframes progress{
+    100% { width: 100%; }
 }
 
 @keyframes glitch-anim-1 {
